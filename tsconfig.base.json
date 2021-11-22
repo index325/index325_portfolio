@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "paths": {
+      "@Components/*": ["components/*"],
+      "@Redux/*": ["redux/*"],
+      "@Utils/*": ["utils"],
+      "@Models/*": ["models/*"],
+      "@ServicesModules/*": ["services/modules/*"],
+      "@Api": ["services"],
+      "@Routes/*": ["routes/*"],
+      "@Hooks/*": ["hooks/*"],
+      "@Constants/*": ["constants"],
+      "@Modules/*": ["modules/*"],
+      "@Config": ["config"],
+      "@Images": ["assets/images/*"],
+      "@Root": ["*"],
+    },
+    "strictPropertyInitialization": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react"
+  }
+}
