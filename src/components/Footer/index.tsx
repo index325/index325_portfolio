@@ -1,14 +1,4 @@
-import {
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  Text,
-  Stack,
-} from "@chakra-ui/react";
-import Logo from "@Images/logo-white.png";
-import FooterLinks from "@Components/Footer/FooterLinks";
+import { Flex, GridItem, Heading, Image, Text, Stack } from "@chakra-ui/react";
 
 import Facebook from "@Images/facebook.png";
 import Linkedin from "@Images/linkedin.png";

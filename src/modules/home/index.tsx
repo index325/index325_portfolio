@@ -1,4 +1,4 @@
-import { Stack, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import About from "@Components/About";
 import ContentContainer from "@Components/ContentContainer";
 import Skills from "@Components/Skills";

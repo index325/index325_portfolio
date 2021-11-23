@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, useLocation } from "react-router-dom";
+import { Switch, useLocation } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import Home from "@Modules/home";
 import Route from "./Route";

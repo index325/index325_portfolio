@@ -1,5 +1,4 @@
 import { Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 import { scroller } from "react-scroll";
 
 interface Props {

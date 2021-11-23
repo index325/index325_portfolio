@@ -1,7 +1,5 @@
 import { Button } from "@chakra-ui/button";
-import { useDisclosure } from "@chakra-ui/hooks";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Input } from "@chakra-ui/input";
 import {
   Drawer,
   DrawerBody,

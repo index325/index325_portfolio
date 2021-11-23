@@ -16,7 +16,6 @@ import Form from "@Components/shared/Form";
 import * as Yup from "yup";
 import CustomInput from "@Components/shared/Form/Input";
 import CustomTextArea from "@Components/shared/Form/TextArea";
-import { useEffect } from "react";
 
 import { init, send } from "emailjs-com";
 import { useLoading } from "@Hooks/useLoading";

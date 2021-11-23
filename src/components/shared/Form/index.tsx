@@ -8,7 +8,7 @@ import {
 } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import { Stack, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 interface IFormProps<T> {
   defaultValues?: UnpackNestedValue<DeepPartial<T>>;
