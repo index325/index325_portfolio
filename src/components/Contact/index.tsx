@@ -19,6 +19,7 @@ import CustomTextArea from "@Components/shared/Form/TextArea";
 
 import { init, send } from "emailjs-com";
 import { useLoading } from "@Hooks/useLoading";
+import AnimatedContainer from "@Components/shared/AnimatedContainer";
 
 const Contact = () => {
   const { handleLoading } = useLoading();
@@ -72,77 +73,100 @@ const Contact = () => {
 
   return (
     <Flex w="100%" direction="column">
-      <Heading textAlign="center" as="h1" w="100%">
-        Contact Me
-      </Heading>
-      <Text textAlign="center" color="gray.500" w="100%">
-        Feel free to contact me
-      </Text>
+      <AnimatedContainer appearFrom="top">
+        <>
+          <Heading textAlign="center" as="h1" w="100%">
+            Contact Me
+          </Heading>
+          <Text textAlign="center" color="gray.500" w="100%">
+            Feel free to contact me
+          </Text>
+        </>
+      </AnimatedContainer>
+
       <Grid templateColumns={["1fr", "1fr", "repeat(3, 1fr)"]} mt="8">
-        <GridItem w="100%">
-          <Stack spacing="8" direction="column">
-            <ContactInfo
-              title="Call Me"
-              icon={<BsTelephone size="40" />}
-              description="+55 (16) 99770-3341"
-            />
-            <ContactInfo
-              title="Email"
-              icon={<MdOutlineEmail size="40" />}
-              description="gabriel.moraes.o@hotmail.com"
-            />
-            <ContactInfo
-              title="Location"
-              icon={<BsPinMap size="40" />}
-              description={
-                <>
-                  Brazil | Araraquara - SP
-                  <br />
-                  Street Bahia N 2790 Ap 13 Block J
-                </>
-              }
-            />
-          </Stack>
-        </GridItem>
+        <AnimatedContainer appearFrom="left">
+          <GridItem w="100%">
+            <Stack spacing="8" direction="column">
+              <ContactInfo
+                title="Call Me"
+                icon={<BsTelephone size="40" />}
+                description="+55 (16) 99770-3341"
+              />
+              <ContactInfo
+                title="Email"
+                icon={<MdOutlineEmail size="40" />}
+                description="gabriel.moraes.o@hotmail.com"
+              />
+              <ContactInfo
+                title="Location"
+                icon={<BsPinMap size="40" />}
+                description={
+                  <>
+                    Brazil | Araraquara - SP
+                    <br />
+                    Street Bahia N 2790 Ap 13 Block J
+                  </>
+                }
+              />
+            </Stack>
+          </GridItem>
+        </AnimatedContainer>
+
         <GridItem w="100%" colSpan={2} mt={["4", "4", "0"]}>
           <Form onSubmit={onSubmit} validationSchema={validationSchema}>
             <SimpleGrid w="100%" columns={[1, 1, 2]} spacing={[0, 0, 4]}>
-              <CustomInput name="name" label="Name" backgroundColor="blue.50" />
-              <CustomInput
-                name="email"
-                label="Email"
-                backgroundColor="blue.50"
-              />
+              <AnimatedContainer appearFrom="bottom">
+                <CustomInput
+                  name="name"
+                  label="Name"
+                  backgroundColor="blue.50"
+                />
+              </AnimatedContainer>
+
+              <AnimatedContainer appearFrom="bottom">
+                <CustomInput
+                  name="email"
+                  label="Email"
+                  backgroundColor="blue.50"
+                />
+              </AnimatedContainer>
             </SimpleGrid>
 
-            <Flex w="100%">
-              <CustomInput
-                name="subject"
-                label="Subject"
-                backgroundColor="blue.50"
-              />
-            </Flex>
+            <AnimatedContainer appearFrom="bottom">
+              <Flex w="100%">
+                <CustomInput
+                  name="subject"
+                  label="Subject"
+                  backgroundColor="blue.50"
+                />
+              </Flex>
+            </AnimatedContainer>
 
-            <Flex w="100%">
-              <CustomTextArea
-                name="message"
-                label="Message"
-                backgroundColor="blue.50"
-              />
-            </Flex>
+            <AnimatedContainer appearFrom="bottom">
+              <Flex w="100%">
+                <CustomTextArea
+                  name="message"
+                  label="Message"
+                  backgroundColor="blue.50"
+                />
+              </Flex>
+            </AnimatedContainer>
 
-            <Flex w="100%" style={{ margin: "0px 0.5rem" }}>
-              <Button
-                mt="4"
-                py="4"
-                colorScheme="blue"
-                size="lg"
-                w="200px"
-                type="submit"
-              >
-                Send
-              </Button>
-            </Flex>
+            <AnimatedContainer appearFrom="left">
+              <Flex w="100%" style={{ margin: "0px 0.5rem" }}>
+                <Button
+                  mt="4"
+                  py="4"
+                  colorScheme="blue"
+                  size="lg"
+                  w="200px"
+                  type="submit"
+                >
+                  Send
+                </Button>
+              </Flex>
+            </AnimatedContainer>
           </Form>
         </GridItem>
       </Grid>

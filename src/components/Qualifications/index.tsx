@@ -2,6 +2,7 @@ import Timeline from "./Timeline";
 import { Flex, Heading, Text, useColorMode } from "@chakra-ui/react";
 import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import { useState } from "react";
+import AnimatedContainer from "@Components/shared/AnimatedContainer";
 
 const Qualifications = () => {
   const themeColor = useColorMode();
@@ -13,70 +14,79 @@ const Qualifications = () => {
 
   return (
     <Flex w="100%" direction="column" margin="auto">
-      <Heading textAlign="center" as="h1" w="100%">
-        Qualifications
-      </Heading>
-      <Text textAlign="center" color="gray.500" w="100%">
-        My personal qualifications
-      </Text>
+      <AnimatedContainer appearFrom="top">
+        <>
+          <Heading textAlign="center" as="h1" w="100%">
+            Qualifications
+          </Heading>
+          <Text textAlign="center" color="gray.500" w="100%">
+            My personal qualifications
+          </Text>
+        </>
+      </AnimatedContainer>
 
       <Flex direction="row" justifyContent="center" mt="6">
-        <Heading
-          mr="6"
-          onClick={() => handleQualificationClick("education")}
-          rounded="lg"
-          _hover={{ backgroundColor: "blue.200" }}
-          p="3"
-          cursor="pointer"
-          w="150px"
-          borderBottom={
-            qualification === "education"
-              ? `2px solid ${
-                  themeColor.colorMode === "light" ? "#1A202C" : "white"
-                }`
-              : "none"
-          }
-        >
-          <Text
-            as="span"
-            fontWeight="bold"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            fontSize="lg"
+        <AnimatedContainer appearFrom="left">
+          <Heading
+            mr="6"
+            onClick={() => handleQualificationClick("education")}
+            rounded="lg"
+            _hover={{ backgroundColor: "blue.200" }}
+            p="3"
+            cursor="pointer"
+            w="150px"
+            borderBottom={
+              qualification === "education"
+                ? `2px solid ${
+                    themeColor.colorMode === "light" ? "#1A202C" : "white"
+                  }`
+                : "none"
+            }
           >
-            <FaGraduationCap size="24" style={{ marginRight: "16px" }} />
-            Education
-          </Text>
-        </Heading>
-        <Heading
-          ml="6"
-          onClick={() => handleQualificationClick("work")}
-          rounded="lg"
-          _hover={{ backgroundColor: "blue.200" }}
-          p="3"
-          cursor="pointer"
-          w="150px"
-          borderBottom={
-            qualification === "work"
-              ? `2px solid ${
-                  themeColor.colorMode === "light" ? "#1A202C" : "white"
-                }`
-              : "none"
-          }
-        >
-          <Text
-            as="span"
-            fontWeight="bold"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            fontSize="lg"
+            <Text
+              as="span"
+              fontWeight="bold"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              fontSize="lg"
+            >
+              <FaGraduationCap size="24" style={{ marginRight: "16px" }} />
+              Education
+            </Text>
+          </Heading>
+        </AnimatedContainer>
+
+        <AnimatedContainer appearFrom="right">
+          <Heading
+            ml="6"
+            onClick={() => handleQualificationClick("work")}
+            rounded="lg"
+            _hover={{ backgroundColor: "blue.200" }}
+            p="3"
+            cursor="pointer"
+            w="150px"
+            borderBottom={
+              qualification === "work"
+                ? `2px solid ${
+                    themeColor.colorMode === "light" ? "#1A202C" : "white"
+                  }`
+                : "none"
+            }
           >
-            <FaBriefcase size="24" style={{ marginRight: "16px" }} />
-            Work
-          </Text>
-        </Heading>
+            <Text
+              as="span"
+              fontWeight="bold"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              fontSize="lg"
+            >
+              <FaBriefcase size="24" style={{ marginRight: "16px" }} />
+              Work
+            </Text>
+          </Heading>
+        </AnimatedContainer>
       </Flex>
 
       {qualification === "work" && (

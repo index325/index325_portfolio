@@ -1,7 +1,8 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
-import { Box, Flex, Heading, Text, Progress } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import CustomCollapse from "@Components/shared/Collapse";
 import { useState } from "react";
+import Progress from "./Progress";
 
 interface Props {
   title: string;
@@ -61,7 +62,7 @@ const SkillsItem = ({ title, icon, subtitle, items }: Props) => {
                 <Text fontSize="md">{item.percentage}%</Text>
               </Flex>
               <Flex w="100%" direction="column">
-                <Progress hasStripe value={item.percentage} />
+                <Progress value={item.percentage} />
               </Flex>
             </Flex>
           ))}

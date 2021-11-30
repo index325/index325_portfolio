@@ -12,6 +12,7 @@ import Linkedin from "@Images/linkedin.png";
 import Instagram from "@Images/instagram.png";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { scroller } from "react-scroll";
+import AnimatedContainer from "@Components/shared/AnimatedContainer";
 
 const Banner = () => {
   return (
@@ -93,10 +94,12 @@ const Banner = () => {
           justifySelf="flex-end"
           mb={["8", "8", "8", "8", "0"]}
         >
-          <Image
-            src="https://icon-library.com/images/icon-programmer/icon-programmer-14.jpg"
-            w="300px"
-          />
+          <AnimatedContainer>
+            <Image
+              src="https://icon-library.com/images/icon-programmer/icon-programmer-14.jpg"
+              w="300px"
+            />
+          </AnimatedContainer>
         </Flex>
       </Flex>
     </Flex>
